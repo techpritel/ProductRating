@@ -66,3 +66,21 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+# About Product Rating:
+This project is a module which let user to give rating to products of different categories. This module can be integrated inside existing application where rating of products is required. 
+Threre will be three different views of this module based on roles:
+## Admin View
+When admin is logged into app then he can add a product, delete or modify an existing product. Admin is also able to give rating to a product. Below SS shows admin view of the Product Rating module:
+
+![image](https://user-images.githubusercontent.com/53652598/65140661-ae591280-da2c-11e9-8385-0dab2bd7f1ae.png)
+
+## Registered User View
+A registerd user is able to give rating to any product displayed in app. He can't update/add/delete a product from the list. Below SS is view of registered user:
+
+![image](https://user-images.githubusercontent.com/53652598/65141484-58856a00-da2e-11e9-9b61-35585f3ba8c5.png)
+
+## UnRegisterd User View
+The app view for unregistered user is same as that of Registered user. The only difference is that while unregistered user try to update the rating of a product app will ask user to register or login first as shown in below SS:
+
+![image](https://user-images.githubusercontent.com/53652598/65141665-b74ae380-da2e-11e9-8b00-ca443b53116e.png)
