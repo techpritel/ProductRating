@@ -3,7 +3,6 @@ import logger from "./logService";
 import { toast } from "react-toastify";
 import {getJwt} from "./authSevice";
 
-
 axios.interceptors.request.use(function (config) {
   const TOKEN = getJwt();
   config.headers.Authorization =   `Bearer ${TOKEN}`;  
@@ -27,7 +26,7 @@ axios.interceptors.response.use(null, error => {
 });
 
 export default {
-  get: axios.get,
+  get:  axios.get,
   post: axios.post,
   put: axios.put,
   delete: axios.delete

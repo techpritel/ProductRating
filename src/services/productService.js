@@ -1,21 +1,22 @@
 import http from "./httpService";
 import apiUrl from "../config.json";
+import { trackPromise } from 'react-promise-tracker';
 export function getProducts() {
-  return http.get(apiUrl.api_endpoint + "products");
+  return trackPromise(http.get(apiUrl.api_endpoint + "products"));
 }
 
 export function deleteProduct(productId) {
-  return http.delete(apiUrl.api_endpoint + "products/" + productId);
+  return trackPromise(http.delete(apiUrl.api_endpoint + "products/" + productId));
 }
 
 export function saveProduct(product) {    
   if (product._id) {
     const body = { ...product };
     delete body._id;
-    return http.put(apiUrl.api_endpoint + "products/" + product._id , body);
+    return trackPromise(http.put(apiUrl.api_endpoint + "products/" + product._id , body));
   }
   return http.post(apiUrl.api_endpoint + "products",product);
 }
 export function getProduct(id) {
-  return http.get(apiUrl.api_endpoint + "products/" + id);
+  return trackPromise(http.get(apiUrl.api_endpoint + "products/" + id));
 }
